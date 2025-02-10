@@ -1,7 +1,16 @@
-function App() {
+import { Post } from './Post';
+
+export function App() {
   return (
-    <h1>Olá Ailton!</h1>
+    <div>
+      <Post 
+        author="Ailton Oliveira" 
+        content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ad quis sed explicabo accusamus libero, natus asperiores numquam inventore cumque ipsam, sequi repellat officiis facilis et dolores maxime quia excepturi."
+      />
+      <Post 
+        author="Eric Lacerda" 
+        content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ad quis sed explicabo accusamus libero, natus asperiores numquam inventore cumque ipsam, sequi repellat officiis facilis et dolores maxime quia excepturi."
+      />
+    </div>
   )
 }
-
-export default App
