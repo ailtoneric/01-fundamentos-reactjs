@@ -20,6 +20,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 0.5rem;
+            transition: color 0.2s, background 0.2s;
+
+            &:hover {
+                background: var(--green);
+                color: var(--white);
+            }
         }
     }
     
