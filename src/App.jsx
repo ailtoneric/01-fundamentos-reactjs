@@ -5,6 +5,36 @@ import { Sidebar } from './components/Sidebar';
 import styles from './App.module.css';
 import './global.css';
 
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://i.pravatar.cc/150?img=69',
+      name: 'Ailton Oliveira',
+      role: 'Software Engineer'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galera!' },
+      { type: 'link', content: 'jane.design/doctorcare' },
+    ],
+    publishedAt: new Date('2025-02-12 08:36:00')
+  },
+  {
+    id: 2,
+    author: {
+      avatarUrl: 'https://i.pravatar.cc/150?img=22',
+      name: 'Fabiana Lacerda',
+      role: 'CTO PDigital'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galera!' },
+      { type: 'link', content: 'jane.design/doctorcare' },
+    ],
+    publishedAt: new Date('2025-02-12 09:36:00')
+  },
+]
+  
+
 export function App() {
   return (
     <div>
@@ -13,14 +43,14 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-          <Post
-            author="Ailton Oliveira" 
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ad quis sed explicabo accusamus libero, natus asperiores numquam inventore cumque ipsam, sequi repellat officiis facilis et dolores maxime quia excepturi."
-          />
-          <Post 
-            author="Eric Lacerda" 
-            content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ad quis sed explicabo accusamus libero, natus asperiores numquam inventore cumque ipsam, sequi repellat officiis facilis et dolores maxime quia excepturi."
-          />
+          {posts.map(post => (
+            <Post 
+              key={post.id}
+              author={post.author}
+              content={post.content}
+              publishedAt={post.publishedAt}
+            />
+          ))}
         </main>
       </div>
     </div>

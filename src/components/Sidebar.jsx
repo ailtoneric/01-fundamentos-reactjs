@@ -12,7 +12,7 @@ export function Sidebar() {
             />
             
             <div className={styles.profile}>
-                <Avatar src='https://i.pravatar.cc/150' />
+                <Avatar src='https://i.pravatar.cc/150?img=69' />
                 <strong>Ailton Oliveira</strong>
                 <span>Desenvolvedor Front-end</span>
             </div>
