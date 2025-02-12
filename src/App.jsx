@@ -27,7 +27,7 @@ const posts = [
       role: 'CTO PDigital'
     },
     content: [
-      { type: 'paragraph', content: 'Fala galera!' },
+      { type: 'paragraph', content: 'Fala galerinha!' },
       { type: 'link', content: 'jane.design/doctorcare' },
     ],
     publishedAt: new Date('2025-02-12 09:36:00')
